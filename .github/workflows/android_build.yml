@@ -19,3 +19,12 @@ jobs:
 
       - name: Build Release AAB
         run: ./gradlew bundleRelease
+
+            - name: Build APK
+              run: bash ./gradlew assembleDebug --stacktrace
+
+            - name: Upload APK
+              uses: actions/upload-artifact@v1
+              with:
+                name: apk
+                path: app/build/outputs/apk/debug/app-debug.apk
