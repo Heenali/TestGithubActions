@@ -14,11 +14,8 @@ jobs:
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
 
-      - name: Run Tests
-        run: ./gradlew test
-
       - name: Build Project
         run: ./gradlew build
 
-      - name: Build Release AAB      // 1
+      - name: Build Release AAB
         run: ./gradlew bundleRelease
